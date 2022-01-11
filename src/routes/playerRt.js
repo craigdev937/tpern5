@@ -1,8 +1,9 @@
 import express from "express";
-import { HomeIndex } from "../controllers/playerCon.js";
+import { CreatePlayer, FetchAllPlayers } from "../controllers/playerCon.js";
 
 export const playerRt = express.Router();
-    playerRt.get("/", HomeIndex);
+    playerRt.post("/", CreatePlayer);
+    playerRt.get("/", FetchAllPlayers);
 
 
 
